@@ -1,8 +1,8 @@
-import styles from "./page.module.css"; 
+import styles from "./Navbar.module.css"; 
 
-function Navbar() {
+export default function Navbar() {
   return (
-      <div className={styles.topnav}>
+      <div className={styles.topNav}>
         <a className="active" href="#Home">Home</a>
         <a href="/news">News</a>
         <a href="/friends">Friends</a>
@@ -11,7 +11,4 @@ function Navbar() {
       </div>
 
   )
-}
-export default function Page() {
-  return <Navbar></Navbar>;
 }
