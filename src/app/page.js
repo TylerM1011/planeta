@@ -1,17 +1,5 @@
-import styles from "./page.module.css"; 
+import { Fragment } from "react";
 
-function Navbar() {
-  return (
-      <div className={styles.topnav}>
-        <a className="active" href="#Home">Home</a>
-        <a href="/news">News</a>
-        <a href="/friends">Friends</a>
-        <a href="/games">Games</a>
-        <a href="/profile">Profile</a>
-      </div>
-
-  )
-}
 export default function Page() {
-  return <Navbar></Navbar>;
+  return <Fragment>hello this is home</Fragment>;
 }
