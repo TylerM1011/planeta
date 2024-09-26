@@ -18,9 +18,9 @@ export default function Page() {
           placeat nihil ut alias itaque sed autem dolorem. Qui sunt vero vel
         </div>
         <div className={styles.reaction}>
-          <div>like</div>
-          <div>comment</div>
-          <div>share</div>
+          <button>Like</button>
+          <button>comment</button>
+          <button>share</button>
         </div>
       </div>
     </div>

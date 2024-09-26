@@ -1,12 +1,12 @@
 .timeline {
   display: flex;
   flex-direction: row;
-
   width: 800px;
   height: auto;
-  margin: auto;
-  background-color: rgb(22, 22, 22);
+  margin: 12px auto;
+  background-color: #222222;
   border-radius: 15px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .avatar {
   border-radius: 10px;
@@ -15,7 +15,6 @@
 }
 .account {
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 28px;
   width: 100%;
   margin-top: 8px;
@@ -25,7 +24,6 @@
 .content {
   color: #fff;
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
   padding-top: 0px;
   padding-left: 8px;
   padding-right: 8px;
@@ -36,12 +34,21 @@
   flex-direction: row;
   justify-content: end;
   list-style: none;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
   align-items: end;
   margin-top: auto;
   gap: 16px;
 }
+.reaction button {
+  background-color: rgb(12, 12, 12);
+  color: #fff;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+}
+.reaction button:hover {
+  background-color: #181818;
+}
+
 .column {
   display: flex;
   flex-direction: column;
