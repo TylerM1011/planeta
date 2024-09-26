@@ -39,14 +39,11 @@
   gap: 16px;
 }
 .reaction button {
-  background-color: rgb(12, 12, 12);
+  background-color: #fff;
   color: #fff;
   padding: 6px;
   border: none;
   border-radius: 6px;
-}
-.reaction button:hover {
-  background-color: #181818;
 }
 
 .column {

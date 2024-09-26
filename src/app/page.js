@@ -1,7 +1,11 @@
+"use client";
+import { useState } from "react";
 import styles from "./timeline.module.css";
 import Image from "next/image";
+import IconButton from "@/components/IconButton";
 
 export default function Page() {
+  const [liked, setLiked] = useState(false);
   return (
     <div className={styles.timeline}>
       <Image
@@ -18,9 +22,20 @@ export default function Page() {
           placeat nihil ut alias itaque sed autem dolorem. Qui sunt vero vel
         </div>
         <div className={styles.reaction}>
-          <button>Like</button>
-          <button>comment</button>
-          <button>share</button>
+          <IconButton
+            width={16}
+            height={16}
+            clicked={() => setLiked(!liked)}
+            active={liked}
+            activeImage="/icons/heart-full.svg"
+            unactiveImage="/icons/heart.svg"
+          />
+          <IconButton
+            width={16}
+            height={16}
+            unactiveImage="/icons/comment-alt.svg"
+          />
+          <IconButton width={16} height={16} unactiveImage="/icons/share.svg" />
         </div>
       </div>
     </div>
