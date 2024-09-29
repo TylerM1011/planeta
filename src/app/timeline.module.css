@@ -55,30 +55,45 @@
 
 .commentBox {
   display: flex;
-  flex-direction: row;
-  margin: auto 142px;
-  justify-content: end;
-  color: #fff;
-  border-radius: 6px;
-  padding: 16px;
-}
-.commentBox input {
+  flex-direction: column;
+  width: 800px;
+  margin: auto;
   background-color: #222222;
   color: #fff;
   border-radius: 6px;
-  margin-right: 16px;
-  width: 100%;
-  border: none;
 }
+
 .comments {
-  color: #fff;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 12px 142px;
-  border-radius: 6px;
-  border: solid #222222;
+  flex-direction: row;
+  background-color: #222222;
+  border: 1px solid #fff;
+  margin: 12px;
+}
+.commentReaction {
+  display: flex;
+  justify-content: end;
   padding: 12px;
+}
+.user {
+  display: flex;
+  flex-direction: row;
   gap: 12px;
+  margin: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.commentInput {
+  display: flex;
+  justify-content: end;
+  width: 800px;
+  gap: 6px;
+  margin: 12px auto;
+}
+.commentInput input {
+  border: none;
+  border-radius: 6px;
+}
+.postContent {
+  margin: 12px;
   font-family: Arial, Helvetica, sans-serif;
 }

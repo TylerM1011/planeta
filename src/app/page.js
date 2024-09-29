@@ -11,7 +11,7 @@ export default function Page() {
   const [comments, setComments] = useState([]);
   const saveComment = () => {
     setComments([...comments, message]);
-    setCommenting(false);
+    setCommenting(true);
     setMessage("");
   };
   return (
@@ -42,33 +42,56 @@ export default function Page() {
             <IconButton
               width={16}
               height={16}
-              clicked={() => setCommenting(!commenting)}
-              unactiveImage="/icons/comment-alt.svg"
+              unactiveImage="/icons/share.svg"
             />
             <IconButton
               width={16}
               height={16}
-              unactiveImage="/icons/share.svg"
+              clicked={() => setCommenting(!commenting)}
+              unactiveImage="/icons/comment-alt.svg"
             />
           </div>
         </div>
       </div>
+      ;
       {commenting && (
         <div className={styles.commentBox}>
-          <input onChange={(event) => setMessage(event.target.value)}></input>
-          <IconButton
-            width={16}
-            height={16}
-            unactiveImage="/icons/paper-plane-top.svg"
-            clicked={saveComment}
-          ></IconButton>
+          <div className={styles.commentInput}>
+            <input onChange={(event) => setMessage(event.target.value)}></input>
+            <IconButton
+              width={16}
+              height={16}
+              unactiveImage="/icons/paper-plane-top.svg"
+              clicked={saveComment}
+            ></IconButton>
+          </div>
+          {comments.map((comment) => (
+            <div className={styles.comment}>
+              <div className={styles.user}>
+                <Image
+                  src="/icons/pfp.svg"
+                  height={64}
+                  width={64}
+                  alt="profile picture"
+                ></Image>
+                <h1>Username</h1>
+              </div>
+              <div className={styles.postContent}>{comment}</div>
+
+              <div className={styles.commentReaction}>
+                <IconButton
+                  width={16}
+                  height={16}
+                  clicked={() => setLiked(!liked)}
+                  active={liked}
+                  activeImage="/icons/heart-full.svg"
+                  unactiveImage="/icons/heart.svg"
+                />
+              </div>
+            </div>
+          ))}
         </div>
       )}
-      <div className={styles.comments}>
-        {comments.map((comment) => (
-          <div>{comment}</div>
-        ))}
-      </div>
     </div>
   );
 }
