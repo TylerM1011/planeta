@@ -1,0 +1,54 @@
+.avatar {
+  border-radius: 10px;
+  margin-right: 15px;
+  margin: 24px;
+}
+.account {
+  color: #fff;
+  font-size: 28px;
+  width: 100%;
+  margin-top: 8px;
+
+  margin-bottom: 16px;
+}
+.content {
+  color: #fff;
+  font-size: 16px;
+  padding-top: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 460px;
+}
+.reaction {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  list-style: none;
+  align-items: end;
+  margin-top: auto;
+  gap: 16px;
+}
+.reaction button {
+  background-color: #fff;
+  color: #fff;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 16px 24px;
+}
+.postContainer {
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  height: auto;
+  margin: 12px auto;
+  background-color: #222222;
+  border-radius: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
