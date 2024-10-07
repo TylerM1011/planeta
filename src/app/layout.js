@@ -26,6 +26,9 @@ export default function RootLayout({ children }) {
           <Link className={styles.topLink} href="/">
             Home{" "}
           </Link>
+          <Link className={styles.topLink} href="/games">
+            Games{" "}
+          </Link>
           <Link className={styles.topLink} href="/store">
             Store{" "}
           </Link>
