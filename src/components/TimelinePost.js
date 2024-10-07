@@ -16,10 +16,7 @@ export default function TimelinePost(props) {
         />
         <div className={styles.column}>
           <div className={styles.account}>Generic Name</div>
-          <div className={styles.content}>
-            Lorem ipsum dolor sit amet. Sit eius aliquid aut atque mollitia eum
-            placeat nihil ut alias itaque sed autem dolorem. Qui sunt vero vel
-          </div>
+          <div className={styles.content}>{props.post}</div>
           <div className={styles.reaction}>
             <IconButton
               width={16}

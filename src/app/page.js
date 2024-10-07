@@ -6,6 +6,8 @@ import TimelinePost from "@/components/TimelinePost";
 import IconButton from "@/components/IconButton";
 
 export default function Page(props) {
+  const [posts, setPost] = useState([]);
+  const [postInput, setPostInput] = useState("");
   const [liked, setLiked] = useState(false);
   const [commenting, setCommenting] = useState(false);
   const [message, setMessage] = useState("");
@@ -15,25 +17,32 @@ export default function Page(props) {
     setCommenting(true);
     setMessage("");
   };
+  const savePost = () => {
+    setPost([...posts, postInput]);
+    setPostInput("");
+  };
   return (
     <div>
       <div className={styles.newPost}>
-        <IconButton
-          width={32}
-          height={32}
-          unactiveImage="/icons/plus-small.svg"
-          onClick={() => TimelinePost}
-        ></IconButton>
+        <input onChange={(event) => setPostInput(event.target.value)}></input>
+        <button type="button" onClick={savePost}>
+          New Post
+        </button>
       </div>
-      <TimelinePost
-        liked={liked}
-        setLiked={setLiked}
-        setCommenting={setCommenting}
-        commenting={commenting}
-        onInputChange={(event) => setMessage(event.target.value)}
-        onSaveComment={saveComment}
-        comments={comments}
-      ></TimelinePost>
+      {posts.map((post) => {
+        return (
+          <TimelinePost
+            liked={liked}
+            setLiked={setLiked}
+            setCommenting={setCommenting}
+            commenting={commenting}
+            onInputChange={(event) => setMessage(event.target.value)}
+            onSaveComment={saveComment}
+            comments={comments}
+            post={post}
+          ></TimelinePost>
+        );
+      })}
     </div>
   );
 }

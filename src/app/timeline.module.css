@@ -1,0 +1,16 @@
+.newPost {
+  display: flex;
+  justify-content: center;
+  background-color: #222222;
+  width: 800px;
+  margin: auto;
+  border-radius: 6px;
+}
+.newPost input {
+  background: none;
+  border: none;
+  color: #fff;
+}
+.newPost button {
+  margin: 12px;
+}
