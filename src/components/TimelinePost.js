@@ -4,6 +4,45 @@ import styles from "./TimelinePost.module.css";
 import CommentSection from "./CommentSection";
 
 export default function TimelinePost(props) {
+  // function that returns a random username
+  function randomUsername() {
+    const adjectives = [
+      "beautiful",
+      "handsome",
+      "intelligent",
+      "talented",
+      "creative",
+      "kind",
+      "compassionate",
+      "caring",
+      "adventurous",
+      "curious",
+      "helpful",
+      "supportive",
+      "encouraging",
+      "encouraging",
+    ];
+    const nouns = [
+      "cat",
+      "dog",
+      "bird",
+      "fish",
+      "rabbit",
+      "bear",
+      "wolf",
+      "fox",
+      "monkey",
+      "tiger",
+      "elephant",
+      "lion",
+      "shark",
+    ];
+    return (
+      adjectives[Math.floor(Math.random() * adjectives.length)] +
+      " " +
+      nouns[Math.floor(Math.random() * nouns.length)]
+    );
+  }
   return (
     <>
       <div className={styles.postContainer}>
@@ -15,7 +54,7 @@ export default function TimelinePost(props) {
           alt="user avatar"
         />
         <div className={styles.column}>
-          <div className={styles.account}>Generic Name</div>
+          <div className={styles.account}>{randomUsername()}</div>
           <div className={styles.content}>{props.post}</div>
           <div className={styles.reaction}>
             <IconButton
