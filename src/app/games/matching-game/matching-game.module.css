@@ -1,7 +1,60 @@
+.gameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 16px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .cardGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-gap: 22px;
+}
+.card {
+  background-color: #fff;
+  border: 2px solid #fff;
+  width: 100px;
+  height: 124px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 0 2px 6px 4px #0ff;
+}
+.card.flipped {
+  transform: rotateY(0deg);
+}
+
+.wonMessage {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+.resetContainer {
+  display: flex;
+  justify-content: center;
+}
+.resetContainer button {
+  padding: 8px 16px;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.resetContainer button:hover {
+  box-shadow: 0 2px 6px 4px #0ff;
+  transform: scale(1.2, 1.2);
 }
