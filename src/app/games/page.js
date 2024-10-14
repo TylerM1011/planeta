@@ -7,6 +7,9 @@ export default function Games() {
       <Link className={styles.link} href="/games/matching-game">
         Matching Game
       </Link>
+      <Link className={styles.link} href="/games/snake-game">
+        Snake
+      </Link>
     </div>
   );
 }

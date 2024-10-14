@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { IconButton } from "@/components/IconButton";
 import Image from "next/image";
 import styles from "./matching-game.module.css";
 
