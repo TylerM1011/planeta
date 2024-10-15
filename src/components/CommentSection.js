@@ -17,8 +17,8 @@ export default function CommentSection(props) {
             clicked={props.onSaveComment}
           ></IconButton>
         </div>
-        {props.comments.map((comment) => (
-          <div className={styles.comment}>
+        {props.comments.map((comment, I) => (
+          <div className={styles.comment} key={I}>
             <div className={styles.user}>
               <Image
                 src="/icons/pfp.svg"

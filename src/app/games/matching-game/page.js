@@ -90,6 +90,7 @@ export default function MemoryGame() {
             onClick={() => handleCardClick(index)}
           >
             <Image
+              alt="card"
               src={isFlipped(index) ? card : `/matching-game-assets/card.svg`}
               width={100}
               height={124}

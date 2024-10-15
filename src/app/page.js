@@ -29,9 +29,10 @@ export default function Page(props) {
           New Post
         </button>
       </div>
-      {posts.map((post) => {
+      {posts.map((post, I) => {
         return (
           <TimelinePost
+            key={I}
             liked={liked}
             setLiked={setLiked}
             setCommenting={setCommenting}
