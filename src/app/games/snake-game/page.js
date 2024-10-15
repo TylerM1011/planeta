@@ -1,16 +1,11 @@
 "use client";
-import { useState, useEffect } from "react";
+import React from "react";
+import SnakeGame from "/src/components/SnakeGame.js";
 
-export default function SnakeGame() {
+export default function Home() {
   return (
     <div>
-      {" "}
-      Snake Game
-      <div>
-        <button>Start</button>
-        <button>Pause</button>
-        <button>Reset</button>
-      </div>
+      <SnakeGame />
     </div>
   );
 }
