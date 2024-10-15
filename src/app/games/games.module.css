@@ -1,0 +1,9 @@
+.container {
+  color: white;
+}
+.link {
+  text-decoration: none;
+}
+.link:visited {
+  color: white;
+}
